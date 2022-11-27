@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "swa": "swa start build --api-location api"
   },
   "browserslist": {
     "production": [
@@ -45,11 +46,15 @@
       "prettier"
     ],
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": [
+        "warn",
+        {
+          "endOfLine": "auto"
+        }
+      ]
     }
   },
   "prettier": {
-    "singleQuote": true,
-    "bracketSpacing": true
+    "singleQuote": true
   }
 }
