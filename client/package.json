@@ -1,8 +1,9 @@
 {
-  "name": "budget-builder",
-  "version": "0.1.0",
+  "name": "@budget-builder/client",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@budget-builder/common": "0.0.0",
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
@@ -29,32 +30,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.0"
-  },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "prettier",
-      "react-app"
-    ],
-    "plugins": [
-      "react",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "warn",
-        {
-          "endOfLine": "auto"
-        }
-      ]
-    }
-  },
-  "prettier": {
-    "singleQuote": true
   }
 }

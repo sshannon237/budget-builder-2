@@ -1,18 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import baseFetch from './services';
+import { get } from './services';
+import { useFetch } from './utils/useFetch';
+import { message } from '@budget-builder/common/models/message';
 
-function App() {
-  const [data, setData] = useState('');
+const App = () => {
+  const [data, setData] = useState<string>('');
 
-  useEffect(() => {
-    baseFetch('test?name=tod').then((res) => {
-      console.log(res);
-      setData(res.message);
-    });
+  // useEffect(() => {
+  //   (async () => {
+  //     const testData = await get<any>('test?name=tod');
+  //     setData(testData.message);
+  //   })();
+  // }, []);
+
+  useFetch(async () => {
+    const testData = await get<message>('test?name=tod');
+    setData(testData.message);
   });
 
   return <div>{data}</div>;
-}
+};
 
 export default App;
